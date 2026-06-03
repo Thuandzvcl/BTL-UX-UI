@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tin Tức - Pham Coffee</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .heading-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#0f0f0f] text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5"
+      >
+        <h1 class="text-3xl heading-font font-bold text-amber-500">
+          Pham Coffee
+        </h1>
+
+        <ul
+          class="hidden md:flex items-center gap-8 uppercase tracking-[0.2em] text-sm"
+        >
+          <li>
+            <a href="index.html" class="hover:text-amber-400 transition">
+              Trang chủ
+            </a>
+          </li>
+
+          <li>
+            <a href="thucdon.html" class="hover:text-amber-400 transition">
+              Thực đơn
+            </a>
+          </li>
+
+          <li>
+            <a href="tintuc.html" class="text-amber-500"> Tin tức </a>
+          </li>
+
+          <li>
+            <a href="lichsukien.html" class="hover:text-amber-400 transition">
+              Lịch sự kiện
+            </a>
+          </li>
+
+          <li>
+            <a href="thuvien.html" class="hover:text-amber-400 transition">
+              Thư viện
+            </a>
+          </li>
+
+          <li>
+            <a href="vechungtoi.html" class="hover:text-amber-400 transition">
+              Về chúng tôi
+            </a>
+          </li>
+
+          <li>
+            <a href="lienhe.html" class="hover:text-amber-400 transition">
+              Liên hệ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1887&auto=format&fit=crop"
+        class="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
+      />
+
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="relative z-10 px-6">
+        <span class="uppercase tracking-[0.4em] text-amber-400 text-sm">
+          Coffee Blog
+        </span>
+
+        <h2 class="text-6xl md:text-8xl heading-font font-bold mt-6">
+          Tin Tức
+        </h2>
+
+        <p class="max-w-2xl mx-auto text-zinc-300 mt-8 text-lg leading-relaxed">
+          Cập nhật xu hướng café, sự kiện mới và những câu chuyện thú vị từ
+          Pham Coffee.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED NEWS -->
+    <section class="py-28 px-6 bg-[#111111]">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        <div class="overflow-hidden rounded-[2rem]">
+          <img
+            src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1887&auto=format&fit=crop"
+            class="w-full h-[500px] object-cover hover:scale-105 transition duration-700"
+          />
+        </div>
+
+        <div>
+          <span class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+            Featured News
+          </span>
+
+          <h2 class="text-5xl heading-font font-bold mt-6 leading-tight">
+            Khai Trương Không Gian Café Mới Tại Hải Phòng
+          </h2>
+
+          <p class="text-zinc-400 mt-8 text-lg leading-loose">
+            Pham Coffee chính thức ra mắt không gian café mới với phong
+            cách tối giản hiện đại, mang đến trải nghiệm thư giãn và làm việc lý
+            tưởng cho giới trẻ.
+          </p>
+
+          <button
+            class="mt-10 bg-amber-500 hover:bg-amber-400 transition px-8 py-4 rounded-full text-black uppercase tracking-widest text-sm font-semibold"
+          >
+            Xem Chi Tiết
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS GRID -->
+    <section class="py-28 px-6 bg-[#0f0f0f]">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-16">
+          <div>
+            <span class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+              Latest Articles
+            </span>
+
+            <h2 class="text-5xl heading-font font-bold mt-4">Bài Viết Mới</h2>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Coffee
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                5 Loại Café Được Yêu Thích Nhất 2026
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Khám phá những loại café được giới trẻ yêu thích nhất hiện nay.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Event
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                Acoustic Night Mỗi Cuối Tuần
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Không gian âm nhạc acoustic chill dành cho những buổi tối thư
+                giãn.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Lifestyle
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                Góc Làm Việc Được Yêu Thích Nhất
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Không gian yên tĩnh với ánh sáng tự nhiên giúp tăng hiệu suất
+                làm việc.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Barista
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                Workshop Pha Chế Café Chuyên Nghiệp
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Học cách pha chế cùng các barista chuyên nghiệp tại Alchemist
+                Coffee.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Coffee Beans
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                Hành Trình Từ Nông Trại Đến Tách Café
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Tìm hiểu quy trình tuyển chọn và rang xay hạt café chất lượng
+                cao.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#1a1a1a] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-amber-400 text-xs uppercase tracking-[0.3em]">
+                Community
+              </span>
+
+              <h3 class="text-3xl heading-font font-bold mt-5 leading-snug">
+                Café Và Văn Hóa Gặp Gỡ Của Giới Trẻ
+              </h3>
+
+              <p class="text-zinc-400 mt-5 leading-relaxed">
+                Café không chỉ là đồ uống mà còn là nơi kết nối cộng đồng.
+              </p>
+
+              <button
+                class="mt-6 text-amber-400 uppercase tracking-widest text-sm hover:text-amber-300 transition"
+              >
+                Đọc thêm →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-32 bg-[#151515] px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <span class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+          Newsletter
+        </span>
+
+        <h2
+          class="text-5xl md:text-6xl heading-font font-bold mt-6 leading-tight"
+        >
+          Đăng Ký Nhận Tin Mới
+        </h2>
+
+        <p class="text-zinc-400 mt-8 text-lg leading-relaxed">
+          Nhận thông tin ưu đãi, bài viết mới và sự kiện đặc biệt từ Alchemist
+          Coffee.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-5 mt-10 justify-center">
+          <input
+            type="email"
+            placeholder="Nhập email của bạn"
+            class="bg-[#1c1c1c] border border-white/10 rounded-full px-8 py-4 w-full md:w-[420px] outline-none focus:border-amber-400 transition"
+          />
+
+          <button
+            class="bg-amber-500 hover:bg-amber-400 transition px-8 py-4 rounded-full text-black uppercase tracking-widest text-sm font-semibold"
+          >
+            Đăng Ký
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-white/5 py-16 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-3xl heading-font font-bold text-amber-500">
+            Pham Coffee
+          </h3>
+
+          <p class="mt-6 text-zinc-400 leading-relaxed">
+            Không gian café hiện đại dành cho học tập, làm việc và thư giãn.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+            Contact
+          </h4>
+
+          <ul class="mt-6 space-y-4 text-zinc-400">
+            <li>Hải Phòng, Việt Nam</li>
+            <li>alchemistcoffee@gmail.com</li>
+            <li>0123 456 789</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+            Social
+          </h4>
+
+          <ul class="mt-6 space-y-4 text-zinc-400">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>TikTok</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/5 mt-16 pt-8 text-center text-zinc-500 text-sm"
+      >
+        © 2026 Pham Coffee. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+

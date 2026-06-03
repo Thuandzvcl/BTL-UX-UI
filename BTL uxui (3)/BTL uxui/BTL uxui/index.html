@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pham Coffee</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #0f0f0f;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      header {
+        backdrop-filter: blur(14px);
+        transition: 0.4s;
+      }
+
+      nav ul li a {
+        position: relative;
+        transition: 0.3s;
+      }
+
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0%;
+        height: 2px;
+        background: #f59e0b;
+        transition: 0.4s;
+      }
+
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      nav ul li a:hover {
+        color: #f59e0b;
+      }
+
+      /* Hero */
+      .hero-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.75)
+        );
+      }
+
+      .hero-title {
+        animation: fadeUp 1.2s ease;
+      }
+
+      .hero-text {
+        animation: fadeUp 1.6s ease;
+      }
+
+      .hero-btn {
+        animation: fadeUp 2s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Button */
+      .main-btn {
+        transition: 0.4s;
+        box-shadow: 0 10px 30px rgba(245, 158, 11, 0.25);
+      }
+
+      .main-btn:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+      }
+
+      /* Card */
+      .coffee-card {
+        transition: 0.5s;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .coffee-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(245, 158, 11, 0.4);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .coffee-card img {
+        transition: 0.7s;
+      }
+
+      .coffee-card:hover img {
+        transform: scale(1.08);
+      }
+
+      /* Section Title */
+      .section-title {
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        width: 80px;
+        height: 3px;
+        background: #f59e0b;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -14px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/50 border-b border-white/5"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5"
+      >
+        <h1 class="text-3xl font-bold text-amber-500 font-[Playfair Display]">
+          Pham Coffee
+        </h1>
+
+        <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+          <li>
+            <a href="index.html" class="text-amber-500"> Trang chủ </a>
+          </li>
+
+          <li>
+            <a href="thucdon.html"> Thực đơn </a>
+          </li>
+
+          <li>
+            <a href="tintuc.html"> Tin tức </a>
+          </li>
+
+          <li>
+            <a href="lichsukien.html"> Lịch sự kiện </a>
+          </li>
+
+          <li>
+            <a href="thuvien.html"> Thư viện </a>
+          </li>
+
+          <li>
+            <a href="vechungtoi.html"> Về chúng tôi </a>
+          </li>
+
+          <li>
+            <a href="lienhe.html"> Liên hệ </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1974&auto=format&fit=crop"
+        class="absolute inset-0 w-full h-full object-cover brightness-50"
+      />
+
+      <div class="absolute inset-0 hero-overlay"></div>
+
+      <div class="relative z-10 px-6">
+        <span
+          class="uppercase tracking-[0.4em] text-amber-400 text-sm hero-text"
+        >
+          Since 2015
+        </span>
+
+        <h2
+          class="text-6xl md:text-8xl font-bold font-[Playfair Display] mt-6 leading-tight hero-title"
+        >
+          Premium <br />
+          Coffee Space
+        </h2>
+
+        <p
+          class="max-w-2xl mx-auto text-zinc-300 mt-8 text-lg leading-relaxed hero-text"
+        >
+          Không gian café hiện đại dành cho học tập, làm việc và tận hưởng sự
+          thư giãn.
+        </p>
+
+        <button
+          class="main-btn mt-10 bg-amber-500 hover:bg-amber-400 transition px-8 py-4 rounded-full text-black uppercase tracking-widest text-sm font-semibold hero-btn"
+        >
+          Khám Phá Ngay
+        </button>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="py-28 px-6 bg-zinc-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <span class="uppercase tracking-[0.3em] text-amber-400 text-sm">
+            Our Menu
+          </span>
+
+          <h2
+            class="section-title text-5xl font-bold font-[Playfair Display] mt-5"
+          >
+            Đồ Uống Nổi Bật
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div class="coffee-card bg-zinc-900 rounded-3xl overflow-hidden">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-bold font-[Playfair Display]">Latte</h3>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Hương vị mềm mại kết hợp cùng espresso nguyên chất.
+              </p>
+
+              <div class="mt-6 flex items-center justify-between">
+                <span class="text-amber-400 text-xl font-semibold">
+                  55.000đ
+                </span>
+
+                <button
+                  class="bg-amber-500 hover:bg-amber-400 transition px-5 py-2 rounded-full text-black text-sm font-semibold"
+                >
+                  Đặt ngay
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="coffee-card bg-zinc-900 rounded-3xl overflow-hidden">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-bold font-[Playfair Display]">
+                Cold Brew
+              </h3>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Chiết xuất lạnh mang lại hậu vị dịu nhẹ và thanh mát.
+              </p>
+
+              <div class="mt-6 flex items-center justify-between">
+                <span class="text-amber-400 text-xl font-semibold">
+                  60.000đ
+                </span>
+
+                <button
+                  class="bg-amber-500 hover:bg-amber-400 transition px-5 py-2 rounded-full text-black text-sm font-semibold"
+                >
+                  Đặt ngay
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="coffee-card bg-zinc-900 rounded-3xl overflow-hidden">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-72 object-cover"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-bold font-[Playfair Display]">
+                Cappuccino
+              </h3>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Foam sữa dày mịn kết hợp espresso đậm đà đầy cuốn hút.
+              </p>
+
+              <div class="mt-6 flex items-center justify-between">
+                <span class="text-amber-400 text-xl font-semibold">
+                  65.000đ
+                </span>
+
+                <button
+                  class="bg-amber-500 hover:bg-amber-400 transition px-5 py-2 rounded-full text-black text-sm font-semibold"
+                >
+                  Đặt ngay
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Thực Đơn - Pham Coffee</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .heading-font {
+        font-family: "Playfair Display", serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#062a24] text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-emerald-950/60 backdrop-blur-xl border-b border-white/5"
+    >
+      <nav
+        class="relative max-w-7xl mx-auto flex items-center justify-between px-6 py-5"
+      >
+        <h1 class="text-3xl heading-font font-bold text-emerald-600">
+          Pham Coffee
+        </h1>
+
+        <button
+          id="mobile-menu-button"
+          aria-expanded="false"
+          aria-label="Open menu"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-emerald-400/40 text-emerald-400 hover:bg-emerald-600/20 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8h16M4 16h16"
+            />
+          </svg>
+        </button>
+
+        <ul
+          id="mobile-menu"
+          class="hidden absolute top-full left-0 right-0 mt-2 bg-emerald-950/95 backdrop-blur-xl border border-white/10 rounded-3xl p-6 space-y-4 z-40 md:hidden"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Trang chủ</a
+            >
+          </li>
+          <li>
+            <a
+              href="thucdon.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Thực đơn</a
+            >
+          </li>
+          <li>
+            <a
+              href="tintuc.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Tin tức</a
+            >
+          </li>
+          <li>
+            <a
+              href="lichsukien.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Lịch sự kiện</a
+            >
+          </li>
+          <li>
+            <a
+              href="thuvien.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Thư viện</a
+            >
+          </li>
+          <li>
+            <a
+              href="vechungtoi.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Về chúng tôi</a
+            >
+          </li>
+          <li>
+            <a
+              href="lienhe.html"
+              class="block text-white hover:text-emerald-400 transition"
+              >Liên hệ</a
+            >
+          </li>
+        </ul>
+
+        <ul
+          class="hidden md:flex items-center gap-8 uppercase tracking-[0.2em] text-sm"
+        >
+          <li>
+            <a href="index.html" class="hover:text-emerald-400 transition">
+              Trang chủ
+            </a>
+          </li>
+
+          <li>
+            <a href="thucdon.html" class="text-emerald-600"> Thực đơn </a>
+          </li>
+
+          <li>
+            <a href="tintuc.html" class="hover:text-emerald-400 transition">
+              Tin tức
+            </a>
+          </li>
+
+          <li>
+            <a href="lichsukien.html" class="hover:text-emerald-400 transition">
+              Lịch sự kiện
+            </a>
+          </li>
+
+          <li>
+            <a href="thuvien.html" class="hover:text-emerald-400 transition">
+              Thư viện
+            </a>
+          </li>
+
+          <li>
+            <a href="vechungtoi.html" class="hover:text-emerald-400 transition">
+              Về chúng tôi
+            </a>
+          </li>
+
+          <li>
+            <a href="lienhe.html" class="hover:text-emerald-400 transition">
+              Liên hệ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1887&auto=format&fit=crop"
+        class="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
+      />
+
+      <div class="absolute inset-0 bg-emerald-950/40"></div>
+
+      <div class="relative z-10 px-6">
+        <span class="uppercase tracking-[0.4em] text-emerald-400 text-sm">
+          Premium Menu
+        </span>
+
+        <h2 class="text-6xl md:text-8xl heading-font font-bold mt-6">
+          Thực Đơn
+        </h2>
+
+        <p class="text-zinc-300 max-w-2xl mx-auto mt-8 text-lg leading-relaxed">
+          Thưởng thức những thức uống signature được pha chế từ những hạt cà phê
+          tuyển chọn.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="py-10 bg-[#0d3d33] border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-5">
+          <button
+            class="bg-emerald-600 text-black px-6 py-3 rounded-full uppercase tracking-widest text-sm font-semibold"
+          >
+            Coffee
+          </button>
+
+          <button
+            class="border border-white/10 hover:border-emerald-400 transition px-6 py-3 rounded-full uppercase tracking-widest text-sm"
+          >
+            Tea
+          </button>
+
+          <button
+            class="border border-white/10 hover:border-emerald-400 transition px-6 py-3 rounded-full uppercase tracking-widest text-sm"
+          >
+            Freeze
+          </button>
+
+          <button
+            class="border border-white/10 hover:border-emerald-400 transition px-6 py-3 rounded-full uppercase tracking-widest text-sm"
+          >
+            Cake
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU GRID -->
+    <section class="py-28 px-6 bg-[#062a24]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Latte</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  65K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Espresso hòa quyện cùng sữa tươi tạo nên hương vị mềm mại.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Cold Brew</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  75K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Chiết xuất lạnh trong 18 giờ cho hậu vị dịu nhẹ và thanh mát.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=1974&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Cappuccino</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  70K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Lớp foam sữa dày mịn kết hợp espresso đậm đà.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Matcha Latte</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  69K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Matcha Nhật Bản kết hợp cùng sữa tươi béo nhẹ.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Chocolate Ice</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  72K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Chocolate nguyên chất kết hợp đá xay mịn mát lạnh.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="bg-[#0f4a3f] rounded-[2rem] overflow-hidden border border-white/5 group"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1887&auto=format&fit=crop"
+                class="w-full h-80 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-8">
+              <div class="flex items-center justify-between">
+                <h3 class="text-3xl heading-font font-bold">Strawberry Cake</h3>
+
+                <span class="text-emerald-400 font-semibold text-lg">
+                  55K
+                </span>
+              </div>
+
+              <p class="text-zinc-400 mt-4 leading-relaxed">
+                Bánh ngọt mềm mịn với lớp kem dâu tươi thanh nhẹ.
+              </p>
+
+              <button
+                class="mt-6 w-full bg-emerald-600 hover:bg-emerald-400 transition text-black py-4 rounded-2xl uppercase tracking-widest text-sm font-semibold"
+              >
+                Đặt Món
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 text-center bg-[#0d3d33] px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl md:text-7xl heading-font font-bold leading-tight">
+          Taste The <br />
+          Premium Experience
+        </h2>
+
+        <p class="text-zinc-400 mt-8 text-lg leading-relaxed max-w-2xl mx-auto">
+          Khám phá không gian café hiện đại cùng những thức uống signature độc
+          quyền.
+        </p>
+
+        <button
+          class="mt-10 bg-emerald-600 hover:bg-emerald-400 transition px-10 py-5 rounded-full text-black uppercase tracking-widest text-sm font-semibold"
+        >
+          Đặt Bàn Ngay
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-emerald-950 border-t border-white/5 py-16 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-3xl heading-font font-bold text-emerald-600">
+            Pham Coffee
+          </h3>
+
+          <p class="mt-6 text-zinc-400 leading-relaxed">
+            Không gian café hiện đại dành cho học tập, làm việc và thư giãn.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="uppercase tracking-[0.3em] text-emerald-400 text-sm">
+            Contact
+          </h4>
+
+          <ul class="mt-6 space-y-4 text-zinc-400">
+            <li>Hải Phòng, Việt Nam</li>
+            <li>phamcoffee@gmail.com</li>
+            <li>0123 456 789</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="uppercase tracking-[0.3em] text-emerald-400 text-sm">
+            Open Time
+          </h4>
+
+          <ul class="mt-6 space-y-4 text-zinc-400">
+            <li>Mon - Fri : 07:00 - 22:00</li>
+            <li>Saturday : 08:00 - 23:00</li>
+            <li>Sunday : 08:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-white/5 mt-16 pt-8 text-center text-zinc-500 text-sm"
+      >
+        © 2026 Pham Coffee. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("hidden");
+        const expanded = mobileMenu?.classList.contains("hidden")
+          ? "false"
+          : "true";
+        mobileMenuButton?.setAttribute("aria-expanded", expanded);
+      });
+    </script>
+  </body>
+</html>
