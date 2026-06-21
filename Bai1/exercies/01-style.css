@@ -1,0 +1,70 @@
+/* 01-style.css */
+:root {
+  --color-primary: #FF4757;
+  --color-secondary: #FFA502;
+  --bg-1: #F8F9FA;
+  --bg-2: #F1F2F6;
+  --surface-strong: #FFFFFF;
+  --text-primary: #2D3436;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+}
+
+/* Tối ưu Header & Nav cố định trên Mobile, hiển thị đẹp trên Web */
+header {
+  background: var(--surface-strong);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  background: var(--surface-strong);
+  border-top: 1px solid var(--border);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Card sản phẩm nổi bật */
+article {
+  background: var(--surface-strong);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 71, 87, 0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+/* Grid Responsive cho danh sách sản phẩm */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}

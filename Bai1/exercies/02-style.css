@@ -1,0 +1,39 @@
+/* 02-style.css */
+:root {
+  --color-primary: #FF4757;
+  --color-secondary: #FFA502;
+}
+
+body { background-color: #F8F9FA; }
+
+header { background: #fff; }
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Chia 2 cột khi lên màn hình lớn (Tablet/Web) */
+@media (min-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+  .dashboard-overview {
+    grid-column: 1 / -1; /* Trải dài toàn bộ hàng đầu tiên */
+  }
+}
+
+article {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.2s;
+}
+article:hover { transform: translateX(5px); }
+
+ul li {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}

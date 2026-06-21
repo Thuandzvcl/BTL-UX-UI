@@ -1,0 +1,36 @@
+/* 05-style.css */
+:root { --color-primary: #FF4757; }
+body { background: #F8F9FA; }
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .profile-form { grid-template-columns: 1fr 1fr; }
+  .profile-form section:nth-of-type(3),
+  .profile-form section:nth-of-type(4) {
+    grid-column: 1 / -1;
+  }
+}
+
+section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #DFE6E9;
+}
+
+input.form-control, select.form-select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #DFE6E9;
+  background-color: #fafbfc;
+}
+input.form-control:focus, select.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(255, 71, 87, 0.1);
+}

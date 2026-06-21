@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 02 - Tablet Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="02-style.css" />
+  </head>
+  <body>
+    <header class="d-flex justify-content-between align-items-center p-4 shadow-sm mb-4">
+      <h1 class="h4 mb-0 fw-bold">Quản Lý Cửa Hàng</h1>
+      <button type="button" class="btn btn-outline-dark rounded-pill fw-bold">Thông Báo Mới</button>
+    </header>
+
+    <main class="container py-2 dashboard-layout">
+      <section class="dashboard-overview p-4 p-md-5 text-white rounded-4" style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));">
+        <h2 class="h5 opacity-75 mb-2">Tổng Quan Kinh Doanh</h2>
+        <p class="display-6 fw-bold mb-0">2 đơn hàng mới, 1 đơn cần giao hôm nay.</p>
+      </section>
+
+      <section class="p-4 bg-white rounded-4 shadow-sm border">
+        <h2 class="h5 border-bottom pb-3 mb-4 fw-bold">Đơn Hàng Đang Xử Lý</h2>
+        
+        <article class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-4 mb-3 border">
+          <div class="mb-3 mb-sm-0">
+            <h3 class="h6 fw-bold mb-1">Mã Đơn: #DH-1005 (Giày Thể Thao Đỏ)</h3>
+            <p class="text-muted small mb-0">Thời gian: 10 phút trước</p>
+          </div>
+          <button type="button" class="btn btn-dark rounded-pill px-4 fw-bold">Đóng Gói</button>
+        </article>
+        
+        <article class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center p-4 border">
+          <div class="mb-3 mb-sm-0">
+            <h3 class="h6 fw-bold mb-1">Mã Đơn: #DH-1006 (Giày Chạy Bộ)</h3>
+            <p class="text-muted small mb-0">Thời gian: 1 giờ trước</p>
+          </div>
+          <button type="button" class="btn btn-dark rounded-pill px-4 fw-bold">Đóng Gói</button>
+        </article>
+      </section>
+
+      <section class="p-4 bg-white rounded-4 shadow-sm border">
+        <h2 class="h5 border-bottom pb-3 mb-4 fw-bold">Công Việc Cần Làm</h2>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+          <li class="p-3 border border-start border-4 border-danger text-dark fw-bold">Kiểm tra tồn kho: Phụ kiện tất</li>
+          <li class="p-3 border text-muted">Liên hệ nhà vận chuyển đơn #DH-1002</li>
+          <li class="p-3 border text-muted">Cập nhật hình ảnh sản phẩm mới</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

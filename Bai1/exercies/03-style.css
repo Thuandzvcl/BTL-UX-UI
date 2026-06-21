@@ -1,0 +1,28 @@
+/* 03-style.css */
+:root {
+  --color-primary: #FF4757;
+  --color-secondary: #FFA502;
+}
+
+body { background-color: #F4F6F9; }
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .analytics-grid { grid-template-columns: 300px 1fr; }
+  aside { grid-column: 1; }
+  .analytics-content { grid-column: 2; }
+}
+
+.metric-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  text-align: center;
+  border: 1px solid #DFE6E9;
+}
